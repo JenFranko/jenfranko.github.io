@@ -10,24 +10,13 @@ collections:
   - name: "home"
     label: "Home"
     folder: "src/content/home"
+    create: false
     fields:
       - name: "name"
         widget: "string"
         required: true
-      - label: "Featured Image"
-        name: "hero"
-        widget: "image"
-        required: false
-      - label: "Featured Title"
-        name: "title"
-        widget: "string"
-        required: false
-      - label: "Feature Description"
-        name: "markdown"
-        widget: "string"
-        required: false
-      - label: "Body"
-        name: "content"
+      - label: "Intro"
+        name: "intro"
         widget: "markdown"
         required: false
       - label: "Tags"
