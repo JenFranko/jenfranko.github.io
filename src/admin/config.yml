@@ -43,7 +43,7 @@ collections:
           required: true
         - name: "image"
           label: "Link Image"
-          widget: "file"
+          widget: "string"
           required: true
       - name: "download"
         label: "Download Resume Text"
