@@ -3,23 +3,192 @@ backend:
   branch: main # Branch where CMS changes will be committed
   repo: JenFranko/portfolio # Path to your Github repository
   use_large_media_transforms_in_media_library: false
-media_folder: "src/assets/images" # Media files will be stored in the repo under images/uploads
-public_folder: "/assets/images"
+media_folder: "src/assets/uploads" # Where media files will be stored in the repo
+public_folder: "/assets/uploads"
 
 collections:
+  - name: "info"
+    label: "Info"
+    folder: "src/content/info"
+    create: false
+    fields:
+      - name: "name"
+        label: "Name"
+        widget: "string"
+        required: true
+      - name: "email"
+        label: "Email"
+        widget: "string"
+        required: false
+      - name: "phone"
+        label: "Phone Number"
+        widget: "string"
+        required: false
+      - name: "location"
+        label: "Location"
+        widget: "string"
+        required: false
+      - name: "social"
+        label: "Social Media Links"
+        widget: "list"
+        required: false
+        - name: "name"
+          label: "App Name"
+          widget: "string"
+          required: true
+        - name: "url"
+          label: "Profile URL"
+          widget: "string"
+          required: true
+        - name: "image"
+          label: "Link Image"
+          widget: "file"
+          required: true
+      - name: "download"
+        label: "Download Resume Text"
+        widget: "string"
+        default: "Download as .PDF"
+        required: false
+      - name: "contact"
+        label: "Contact Info Section Name"
+        widget: "string"
+        default: "Get In Touch"
+        required: false
   - name: "home"
     label: "Home"
     folder: "src/content/home"
     create: false
     fields:
-      - name: "name"
-        widget: "string"
+      - name: "greeting"
+        label: "Greeting"
+        widget: "markdown"
         required: true
       - label: "Intro"
         name: "intro"
         widget: "markdown"
         required: false
+      - label: "Intro Images"
+        name: "intro_bg"
+        widget: "list"
+        required: false
+        fields:
+        - label: "Background Image"
+          name: "image"
+          widget: "image"
+          required: false
+      - label: "About"
+        name: "about"
+        widget: "list"
+        required: false
+        fields:
+        - label: "About Title"
+          name: "title"
+          widget: "string"
+          default: "About Me"
+          required: false
+        - label: "About Image"
+          name: "image"
+          widget: "file"
+          required: false
+        - label: "About Text"
+          name: "text"
+          widget: "markdown"
+          required: true
+      - label: "Attributes"
+        name: "attributes"
+        widget: "list"
+        required: false
+        fields:
+        - label: "Attribtue Name"
+          name: "name"
+          widget: "string"
+          required: true
+        - label: "Attribtue Percentage"
+          name: "percent"
+          widget: "number"
+          value_type: "int"
+          min: 1
+          max: 100
+          step: 1
+          required: true
       - label: "Tags"
         name: "tags"
         widget: "hidden"
         default: "home"
+  - name: "resume"
+    label: "Resume"
+    folder: "src/content/resume"
+    create: false
+    fields:
+      - name: "title"
+        label: "Section Title"
+        widget: "string"
+        default: "Resume"
+        required: true
+      - name: "file"
+        label: "Resume File"
+        widget: "file"
+        required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: "resume"
+      - name: "jobs"
+        label: "Jobs"
+        widget: "list"
+        required: false
+        fields:
+        - name: "company"
+          label: "Company"
+          widget: "string"
+          required: true
+        - label: "Title"
+          name: "title"
+          widget: "string"
+          required: true
+        - label: "Icon"
+          name: "icon"
+          widget: "string"
+          required: false
+        - label: "Description"
+          name: "description"
+          widget: "markdown"
+          required: true
+        - label: "Work Dates"
+          name: "date"
+          widget: "string"
+          required: false
+  - name: "work"
+    label: "Work"
+    folder: "src/content/work"
+    create: true
+    fields:
+      - name: "title"
+        label: "Sample Name"
+        widget: "string"
+        required: true
+      - name: "description"
+        label: "Description"
+        widget: "markdown"
+        required: false
+      - name: "link"
+        label: "Link Image"
+        widget: "file"
+        required: true
+      - name: "images"
+        label: "Images"
+        widget: "list"
+        required: true
+        fields:
+        - name: "image"
+          label: "Image"
+          widget: "file"
+          required: true
+        - name: "description"
+          label: "Description"
+          widget: "markdown"
+          required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: "work"
