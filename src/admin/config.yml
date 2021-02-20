@@ -64,6 +64,10 @@ collections:
     folder: "src/content/home"
     create: false
     fields:
+      - name: "name"
+        label: "Page Name"
+        widget: "string"
+        required: true
       - name: "greeting"
         label: "Greeting"
         widget: "markdown"
