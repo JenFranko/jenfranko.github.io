@@ -54,6 +54,10 @@ collections:
         widget: "string"
         default: "Get In Touch"
         required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "hidden"
+        default: "info"
   - name: "home"
     label: "Home"
     folder: "src/content/home"
