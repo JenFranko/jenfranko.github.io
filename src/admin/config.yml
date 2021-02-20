@@ -55,6 +55,11 @@ collections:
         widget: "string"
         default: "Get In Touch"
         required: false
+      - name: "work"
+        label: "Work Section Name"
+        widget: "string"
+        default: "My Work"
+        required: false
       - label: "Tags"
         name: "tags"
         widget: "hidden"
@@ -175,6 +180,11 @@ collections:
       - name: "title"
         label: "Sample Name"
         widget: "string"
+        required: true
+      - name: "date"
+        label: "Date"
+        hint: "This is used for ordering the content on the page"
+        widget: "date"
         required: true
       - name: "description"
         label: "Description"
