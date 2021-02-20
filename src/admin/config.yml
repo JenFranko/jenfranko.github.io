@@ -72,12 +72,8 @@ collections:
         label: "Greeting"
         widget: "markdown"
         required: true
-      - label: "Intro"
-        name: "intro"
-        widget: "markdown"
-        required: false
-      - label: "Intro Images"
-        name: "intro_bg"
+      - label: "Greeting Background Images"
+        name: "greeting_bg"
         widget: "list"
         required: false
         fields:
@@ -85,6 +81,10 @@ collections:
           name: "image"
           widget: "image"
           required: false
+      - label: "Intro"
+        name: "intro"
+        widget: "markdown"
+        required: false
       - label: "About"
         name: "about"
         widget: "list"
