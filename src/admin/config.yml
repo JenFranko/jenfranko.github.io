@@ -184,7 +184,8 @@ collections:
       - name: "date"
         label: "Date"
         hint: "This is used for ordering the content on the page"
-        widget: "date"
+        widget: "datetime"
+        date_format: "DD.MM.YYYY"
         required: true
       - name: "description"
         label: "Description"
