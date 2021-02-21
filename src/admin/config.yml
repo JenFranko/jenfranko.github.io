@@ -68,6 +68,23 @@ collections:
         widget: "string"
         default: "My Work"
         required: false
+      - name: "work_file"
+        label: "Work Sample File"
+        widget: "file"
+        hint: "A file of all of your work for the user to download"
+        required: false
+      - name: "work_download_plural"
+        label: "Work Samples Download Text"
+        widget: "string"
+        default: "Download work samples"
+        hint: "The text to link to downloading all work samples"
+        required: false
+      - name: "work_download_singular"
+        label: "Single Work Sample Download Text"
+        widget: "string"
+        default: "Download this work sample"
+        hint: "The text to link to downloading a single work sample"
+        required: false
       - label: "Tags"
         name: "tags"
         widget: "hidden"
@@ -185,6 +202,11 @@ collections:
         label: "Sample Name"
         widget: "string"
         required: true
+      - name: "file"
+        label: "Work Sample File"
+        widget: "file"
+        hint: "A file for the user to download"
+        required: false
       - name: "date"
         label: "Date"
         hint: "This is used for ordering the content on the page"
@@ -195,8 +217,14 @@ collections:
         label: "Description"
         widget: "markdown"
         required: false
+      - name: "hero"
+        label: "Hero Image"
+        hint: "The big image that loads first on the detail page"
+        widget: "file"
+        required: false
       - name: "link"
         label: "Link Image"
+        hint: "The little image that loads on the home page"
         widget: "file"
         required: true
       - name: "images"
@@ -212,6 +240,11 @@ collections:
           label: "Description"
           widget: "markdown"
           required: false
+        - name: "layout"
+          label: "Image Layout"
+          widget: "select"
+          default: "full"
+          options: ["full", "left", "right"]
       - label: "Tags"
         name: "tags"
         widget: "hidden"
