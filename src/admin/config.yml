@@ -51,7 +51,7 @@ collections:
           required: true
         - name: "brand"
           label: "Font Awesome Brand Icon?"
-          widget: "toggle"
+          widget: "boolean"
           required: false
       - name: "download"
         label: "Download Resume Text"
