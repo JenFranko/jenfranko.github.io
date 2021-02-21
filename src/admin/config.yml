@@ -41,6 +41,10 @@ collections:
           label: "Profile URL"
           widget: "string"
           required: true
+        - name: "text"
+          label: "Link Text"
+          widget: "string"
+          required: true
         - name: "image"
           label: "Link Image"
           widget: "string"
