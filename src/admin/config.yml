@@ -86,10 +86,6 @@ collections:
           name: "image"
           widget: "image"
           required: false
-      - label: "Intro"
-        name: "intro"
-        widget: "markdown"
-        required: false
       - label: "About"
         name: "about"
         widget: "list"
@@ -159,7 +155,7 @@ collections:
         - label: "Title"
           name: "title"
           widget: "string"
-          required: true
+          required: false
         - label: "Icon"
           name: "icon"
           widget: "string"
