@@ -45,6 +45,10 @@ collections:
           label: "Link Image"
           widget: "string"
           required: true
+        - name: "brand"
+          label: "Font Awesome Brand Icon?"
+          widget: "toggle"
+          required: false
       - name: "download"
         label: "Download Resume Text"
         widget: "string"
