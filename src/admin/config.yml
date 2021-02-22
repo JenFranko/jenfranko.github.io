@@ -243,6 +243,7 @@ collections:
         - name: "layout"
           label: "Image Layout"
           widget: "select"
+          required: false
           default: "full"
           options: ["full", "left", "right"]
       - label: "Tags"
