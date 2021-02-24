@@ -85,6 +85,12 @@ collections:
         default: "Download this work sample"
         hint: "The text to link to downloading a single work sample"
         required: false
+      - name: "footer_text"
+        label: "Footer Text"
+        widget: "string"
+        default: "Jen Franko Design"
+        hint: "The text in the footer before the ©"
+        required: false
       - label: "Tags"
         name: "tags"
         widget: "hidden"
